@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+//使用 FeatureManagement
+using Microsoft.FeatureManagement;
 
 namespace webapp
 {
@@ -23,7 +25,10 @@ namespace webapp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //使用 FeatureManagement
+            services.AddFeatureManagement();
             services.AddRazorPages();
+             
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
