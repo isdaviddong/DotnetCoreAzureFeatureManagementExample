@@ -29,7 +29,8 @@ namespace webapp
                       config =>
                         {
                             var settings = config.Build();
-                            var connection = "Endpoint=https://testappconfig20201025.azconfig.io;Id=AULg-lb-s0:dc80GXPyMTCbgi+WF9Fl;Secret=OYPevymfwZJayZ5HOg0b9OuQBSBbC8dFjjFUh2MpxQ0=";
+                            //replace your connection
+                            var connection = "Endpoint=....";
                             config.AddAzureAppConfiguration(options =>
                                 {
                                     options.Connect(connection).UseFeatureFlags(
